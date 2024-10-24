@@ -32,23 +32,15 @@
         rustup component add rust-src --toolchain nightly
         rustup target add wasm32-unknown-unknown --toolchain nightly
     ```
-    + Install WebAssembly Compiler
-    
-    `Debian/Ubuntu`
+    + Install C++ Compiler
     ```
-        apt-get update
-        apt-get -y install binaryen
-    ```
-    
-    `MacOs`
-     ```
-        brew install binaryen
+rustup component add rust-src
     ```
 
 
 - Install Ink CLI:
 ```
-cargo install cargo-contract --force
+cargo install --force --locked cargo-contract
 ```
 
 
@@ -84,7 +76,7 @@ cargo install cargo-contract --force
         ```
         node deploy.js
         ```
-        `Contract Address: 5FKt5cgVbvi9PPNL18dSsnuCCFdC5X1UmLwLcY7tFLUKtL3P`
+        `Contract Address: 0xF26A215A059e3aBB80a53A90E13429DA46090D9C`
 # Frontend
 
 + Go to `ui` folder: 
@@ -98,7 +90,7 @@ cargo install cargo-contract --force
 + Put contract address that your smart contract is deployed in `.env` file
     ```
     REACT_APP_WSS_PROVIDER=wss://rpc.testnet.5ire.network/
-    REACT_APP_CONTRACT_ADDRESS=xxx
+    REACT_APP_CONTRACT_ADDRESS=0xF26A215A059e3aBB80a53A90E13429DA46090D9C
     ```
 
 + Start frontend
